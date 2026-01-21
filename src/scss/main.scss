@@ -1,0 +1,190 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.main__one {
+}
+.main__two {
+  background: $gradient-supersoft;
+  padding: 0 30px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-bottom: 60px;
+}
+.main__two-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  @media screen and (min-width: $breakpoint-md) {
+    flex-direction: column;
+    justify-content: center;
+    margin: 60px auto 60px 0;
+    gap: 10px;
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    margin: 60px auto 60px 0;
+  }
+}
+.service-link {
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  color: $regular-color;
+}
+.service-link__text {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.service-link__arrow {
+}
+.main_two-title {
+  font-size: 30px;
+  font-weight: 700;
+  display: inline-block;
+  background-image: $gradient-red-text;
+  background-clip: text;
+  color: transparent;
+  @media screen and (min-width: $breakpoint-md) {
+    font-size: 38px;
+  }
+}
+.main__two-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  position: relative;
+  @media screen and (min-width: $breakpoint-md) {
+    gap: 60px;
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    gap: 60px;
+  }
+
+  .advantage-card {
+    flex: 1 1 100%;
+    padding: 122px 0 0;
+    position: relative;
+    @media screen and (min-width: $breakpoint-md) {
+      flex: 1 1 calc(50% - 30px);
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      flex: 1 1 calc(33% - 120px);
+    }
+  }
+}
+.advantage-card__title {
+  color: $regular-color;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.advantage-card__text {
+  color: $basic-white;
+  font-weight: 400;
+  font-size: 16px;
+}
+.card-one::before {
+  content: "      ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 122px;
+
+  background: url(..//img/icons/one.svg) no-repeat;
+}
+.card-two::before {
+  content: "      ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 122px;
+
+  background: url(..//img/icons/two.svg) no-repeat;
+}
+.card-three::before {
+  content: "      ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 122px;
+
+  background: url(..//img/icons/three.svg) no-repeat;
+}
+.card-four::before {
+  content: "      ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 122px;
+
+  background: url(..//img/icons/four.svg) no-repeat;
+}
+.card-five::before {
+  content: "      ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 122px;
+
+  background: url(..//img/icons/five.svg) no-repeat;
+}
+.card-six::before {
+  content: "      ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 122px;
+
+  background: url(..//img/icons/six.svg) no-repeat;
+}
+.stripe-block__container {
+  width: 100%;
+  // height: 20px;
+  background: $basic-white;
+  position: relative;
+}
+.stripe-block__container ::before {
+  content: "      ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 10px;
+  background: url(../img/icons/Bgg.svg) no-repeat;
+  background-position: center center;
+  @media screen and (min-width: $breakpoint-md) {
+    background: url(../img/icons/768long.svg) no-repeat;
+    background-position: center center;
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    background: url(../img/icons/1024long.svg) no-repeat;
+    background-position: center center;
+  }
+}
+.stripe-block__container ::after {
+  content: "      ";
+  position: absolute;
+  top: 10px;
+  right: 0;
+  left: 0;
+  height: 10px;
+  background: url(../img/icons/Bg.svg) no-repeat;
+  background-position: center center;
+  @media screen and (min-width: $breakpoint-md) {
+    background: url(../img/icons/768short.svg) no-repeat;
+    background-position: center center;
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    background: url(../img/icons/1024short.svg) no-repeat;
+    background-position: center center;
+  }
+}
