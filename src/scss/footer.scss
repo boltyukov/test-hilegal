@@ -1,0 +1,109 @@
+.footer {
+  padding-top: 30px;
+  background-color: $bg-color;
+  @media screen and (min-width: $breakpoint-md) {
+    padding-bottom: 30px;
+  }
+}
+.container {
+}
+.footer__container {
+  padding: 30px;
+  background: $bg-color;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  // border-top: 2px solid #e6e6f0;
+  // width: 100%;
+  @media screen and (min-width: $breakpoint-md) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-top: 2px solid #e6e6f0;
+    padding-top: 30px;
+  }
+}
+.footer__border {
+  width: 100%;
+  border-top: 2px solid #e6e6f0;
+  @media screen and (min-width: $breakpoint-md) {
+    display: contents;
+  }
+}
+.footer__contacts {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  @media screen and (min-width: $breakpoint-md) {
+    align-items: flex-start;
+  }
+}
+
+.footer__row-top,
+.footer__row-bottom {
+  display: contents;
+
+  align-items: center;
+  gap: 10px;
+  @media screen and (min-width: $breakpoint-md) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.footer__address {
+  font-size: 16px;
+  font-weight: 400;
+  @media screen and (min-width: $breakpoint-md) {
+  }
+}
+.footer__map-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: $regular-color;
+}
+.footer__social {
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+.footer__svg {
+  width: 38px;
+  height: 38px;
+}
+.footer__facebook {
+}
+.footer__phone {
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+  color: $alt-color;
+  text-decoration: none;
+  @media screen and (min-width: $breakpoint-md) {
+    white-space: nowrap;
+  }
+}
+.footer__email {
+  font-weight: 700;
+  font-size: 16px;
+  display: block;
+  color: $regular-color;
+  text-decoration: none;
+}
+.footer__hlegal {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: $text-color;
+  @media screen and (min-width: $breakpoint-md) {
+    margin: 0;
+    text-align: right;
+  }
+}

@@ -1,6 +1,7 @@
 .head {
   min-height: 100vh;
   // display: flex;
+  min-height: 100vh;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -47,6 +48,8 @@
 
 .header__container {
   position: relative;
+  @media screen and (min-width: $breakpoint-md) {
+  }
 }
 .header__inner {
   background: #f5f5fa33;

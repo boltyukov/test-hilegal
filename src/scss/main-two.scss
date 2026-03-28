@@ -7,11 +7,11 @@
 .main__one {
 }
 .main__two {
-  background: $gradient-supersoft;
   padding: 0 30px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   padding-bottom: 60px;
+  overflow: hidden;
 }
 .main__two-header {
   display: flex;
@@ -41,15 +41,9 @@
 .service-link__arrow {
 }
 .main_two-title {
-  font-size: 30px;
-  font-weight: 700;
   display: inline-block;
-  background-image: $gradient-red-text;
-  background-clip: text;
-  color: transparent;
-  @media screen and (min-width: $breakpoint-md) {
-    font-size: 38px;
-  }
+  @include title;
+  @include gradient-text;
 }
 .main__two-cards {
   display: flex;
@@ -136,6 +130,7 @@
 
   background: url(..//img/icons/five.svg) no-repeat;
 }
+
 .card-six::before {
   content: "      ";
   position: absolute;
@@ -151,6 +146,8 @@
   // height: 20px;
   background: $basic-white;
   position: relative;
+  @media screen and (min-width: $breakpoint-md) {
+  }
 }
 .stripe-block__container ::before {
   content: "      ";

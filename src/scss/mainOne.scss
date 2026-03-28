@@ -1,0 +1,137 @@
+// .main__one {
+// }
+// .container {
+// }
+// .main_one-container {
+//   padding: 30px 0;
+//   overflow-x: hidden;
+//   @media screen and (min-width: $breakpoint-md) {
+//     padding: 60px 0;
+//   }
+// }
+// .links {
+//   display: flex;
+//   gap: 30px;
+// }
+// .links-item {
+//   @include title;
+//   white-space: nowrap;
+
+//   &.active {
+//     @include gradient-text($gradient-red-reversed);
+//   }
+// }
+// .content {
+// }
+// .content-item {
+//   display: none;
+//   &.active {
+//     display: block;
+//   }
+// }
+// .content-title {
+// }
+// .content-desc {
+// }
+
+// TAbs
+.mainOne {
+  padding: 30px 0;
+  overflow-x: hidden;
+  @media screen and (min-width: $breakpoint-md) {
+    padding: 60px 0;
+  }
+}
+
+.mainOne__container {
+  @media screen and (min-width: $breakpoint-lg) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.mainOne__links {
+  display: flex;
+  gap: 30px;
+  overflow: auto;
+  padding-bottom: 15px;
+  margin-right: -30px;
+  padding-right: 30px;
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  @media screen and (min-width: $breakpoint-md) {
+    padding-bottom: 45px;
+    margin-right: calc(-50vw + 324px);
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    padding: 0 60px 0 0;
+    margin-right: 0;
+    overflow: visible;
+    flex-flow: column;
+    flex: 1 1 50%;
+    border-right: 4px solid $text-color;
+    align-items: flex-end;
+  }
+  @media screen and (min-width: $breakpoint-xl) {
+    flex: 1 1 40%;
+  }
+  @media screen and (min-width: $breakpoint-xxl) {
+    flex: 1 1 30%;
+  }
+}
+.mainOne__links-item {
+  white-space: nowrap;
+
+  cursor: pointer;
+  @include title;
+
+  &:hover {
+    color: $accent-color;
+  }
+  &.active {
+    @include gradient-text($gradient-red-reversed);
+  }
+}
+
+.mainOne__content {
+  border-top: 4px solid $text-color;
+  padding-top: 30px;
+
+  @media screen and (min-width: $breakpoint-md) {
+    padding-top: 60px;
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    flex: 1 1 50%;
+
+    border: 0;
+    padding: 0 0 0 60px;
+  }
+  @media screen and (min-width: $breakpoint-xl) {
+    flex: 1 1 60%;
+  }
+  @media screen and (min-width: $breakpoint-xxl) {
+    flex: 1 1 70%;
+  }
+}
+.mainOne__content-item {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+.mainOne__content-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: $basic-white;
+  padding-bottom: 30px;
+  @media screen and (min-width: $breakpoint-md) {
+    font-size: 30px;
+  }
+}
+.mainOne__content-desc {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 30px;
+  color: $basic-white;
+}
