@@ -1,3 +1,6 @@
+@use "mixins" as m;
+@use "vars" as v;
+
 // .main__one {
 // }
 // .container {
@@ -38,13 +41,13 @@
 .mainOne {
   padding: 30px 0;
   overflow-x: hidden;
-  @media screen and (min-width: $breakpoint-md) {
+  @media screen and (min-width: v.$breakpoint-md) {
     padding: 60px 0;
   }
 }
 
 .mainOne__container {
-  @media screen and (min-width: $breakpoint-lg) {
+  @media screen and (min-width: v.$breakpoint-lg) {
     display: flex;
     align-items: center;
   }
@@ -60,23 +63,23 @@
   ::-webkit-scrollbar {
     width: 0;
   }
-  @media screen and (min-width: $breakpoint-md) {
+  @media screen and (min-width: v.$breakpoint-md) {
     padding-bottom: 45px;
     margin-right: calc(-50vw + 324px);
   }
-  @media screen and (min-width: $breakpoint-lg) {
+  @media screen and (min-width: v.$breakpoint-lg) {
     padding: 0 60px 0 0;
     margin-right: 0;
     overflow: visible;
     flex-flow: column;
     flex: 1 1 50%;
-    border-right: 4px solid $text-color;
+    border-right: 4px solid v.$text-color;
     align-items: flex-end;
   }
-  @media screen and (min-width: $breakpoint-xl) {
+  @media screen and (min-width: v.$breakpoint-xl) {
     flex: 1 1 40%;
   }
-  @media screen and (min-width: $breakpoint-xxl) {
+  @media screen and (min-width: v.$breakpoint-xxl) {
     flex: 1 1 30%;
   }
 }
@@ -84,33 +87,33 @@
   white-space: nowrap;
 
   cursor: pointer;
-  @include title;
+  @include m.title;
 
   &:hover {
-    color: $accent-color;
+    color: v.$accent-color;
   }
   &.active {
-    @include gradient-text($gradient-red-reversed);
+    @include m.gradient-text(v.$gradient-red-reversed);
   }
 }
 
 .mainOne__content {
-  border-top: 4px solid $text-color;
+  border-top: 4px solid v.$text-color;
   padding-top: 30px;
 
-  @media screen and (min-width: $breakpoint-md) {
+  @media screen and (min-width: v.$breakpoint-md) {
     padding-top: 60px;
   }
-  @media screen and (min-width: $breakpoint-lg) {
+  @media screen and (min-width: v.$breakpoint-lg) {
     flex: 1 1 50%;
 
     border: 0;
     padding: 0 0 0 60px;
   }
-  @media screen and (min-width: $breakpoint-xl) {
+  @media screen and (min-width: v.$breakpoint-xl) {
     flex: 1 1 60%;
   }
-  @media screen and (min-width: $breakpoint-xxl) {
+  @media screen and (min-width: v.$breakpoint-xxl) {
     flex: 1 1 70%;
   }
 }
@@ -123,9 +126,9 @@
 .mainOne__content-title {
   font-size: 20px;
   font-weight: 700;
-  color: $basic-white;
+  color: v.$basic-white;
   padding-bottom: 30px;
-  @media screen and (min-width: $breakpoint-md) {
+  @media screen and (min-width: v.$breakpoint-md) {
     font-size: 30px;
   }
 }
@@ -133,5 +136,5 @@
   font-size: 19px;
   font-weight: 400;
   line-height: 30px;
-  color: $basic-white;
+  color: v.$basic-white;
 }

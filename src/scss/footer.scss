@@ -1,7 +1,9 @@
+@use "vars" as v;
+
 .footer {
   padding-top: 30px;
-  background-color: $bg-color;
-  @media screen and (min-width: $breakpoint-md) {
+  background-color: v.$bg-color;
+  @media screen and (min-width: v.$breakpoint-md) {
     padding-bottom: 30px;
   }
 }
@@ -9,14 +11,14 @@
 }
 .footer__container {
   padding: 30px;
-  background: $bg-color;
+  background: v.$bg-color;
   display: flex;
   flex-direction: column;
   gap: 30px;
 
   // border-top: 2px solid #e6e6f0;
   // width: 100%;
-  @media screen and (min-width: $breakpoint-md) {
+  @media screen and (min-width: v.$breakpoint-md) {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -28,7 +30,7 @@
 .footer__border {
   width: 100%;
   border-top: 2px solid #e6e6f0;
-  @media screen and (min-width: $breakpoint-md) {
+  @media screen and (min-width: v.$breakpoint-md) {
     display: contents;
   }
 }
@@ -39,8 +41,12 @@
   align-items: center;
   gap: 10px;
 
-  @media screen and (min-width: $breakpoint-md) {
-    align-items: flex-start;
+  @media screen and (min-width: v.$breakpoint-md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 100%;
   }
 }
 
@@ -50,16 +56,25 @@
 
   align-items: center;
   gap: 10px;
-  @media screen and (min-width: $breakpoint-md) {
+  @media screen and (min-width: v.$breakpoint-md) {
     display: flex;
     flex-direction: row;
+  }
+}
+.footer__sentence {
+  @media screen and (min-width: v.$breakpoint-md) {
+  }
+}
+.footer__row-bottom {
+  @media screen and (min-width: v.$breakpoint-md) {
+    order: 1;
   }
 }
 
 .footer__address {
   font-size: 16px;
   font-weight: 400;
-  @media screen and (min-width: $breakpoint-md) {
+  @media screen and (min-width: v.$breakpoint-md) {
   }
 }
 .footer__map-link {
@@ -68,7 +83,7 @@
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: 700;
-  color: $regular-color;
+  color: v.$regular-color;
 }
 .footer__social {
   margin-top: 11px;
@@ -84,9 +99,9 @@
   font-size: 16px;
   font-weight: 700;
   display: block;
-  color: $alt-color;
+  color: v.$alt-color;
   text-decoration: none;
-  @media screen and (min-width: $breakpoint-md) {
+  @media screen and (min-width: v.$breakpoint-md) {
     white-space: nowrap;
   }
 }
@@ -94,16 +109,16 @@
   font-weight: 700;
   font-size: 16px;
   display: block;
-  color: $regular-color;
+  color: v.$regular-color;
   text-decoration: none;
 }
 .footer__hlegal {
   text-align: center;
   font-size: 16px;
   font-weight: 400;
-  color: $text-color;
-  @media screen and (min-width: $breakpoint-md) {
-    margin: 0;
-    text-align: right;
+  color: v.$text-color;
+  @media screen and (min-width: v.$breakpoint-md) {
+    // margin: 0;
+    // text-align: right;
   }
 }

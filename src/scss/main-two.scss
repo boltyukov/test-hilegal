@@ -1,3 +1,6 @@
+@use "mixins" as m;
+@use "vars" as v;
+
 .main {
   min-height: 100vh;
   display: flex;
@@ -18,13 +21,13 @@
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 30px;
-  @media screen and (min-width: $breakpoint-md) {
+  @media screen and (min-width: v.$breakpoint-md) {
     flex-direction: column;
     justify-content: center;
     margin: 60px auto 60px 0;
     gap: 10px;
   }
-  @media screen and (min-width: $breakpoint-lg) {
+  @media screen and (min-width: v.$breakpoint-lg) {
     margin: 60px auto 60px 0;
   }
 }
@@ -32,7 +35,7 @@
   font-weight: 700;
   text-decoration: none;
   display: block;
-  color: $regular-color;
+  color: v.$regular-color;
 }
 .service-link__text {
   font-size: 14px;
@@ -42,41 +45,42 @@
 }
 .main_two-title {
   display: inline-block;
-  @include title;
-  @include gradient-text;
+  @include m.title;
+  @include m.gradient-text;
 }
 .main__two-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   position: relative;
-  @media screen and (min-width: $breakpoint-md) {
+  @media screen and (min-width: v.$breakpoint-md) {
     gap: 60px;
   }
-  @media screen and (min-width: $breakpoint-lg) {
+  @media screen and (min-width: v.$breakpoint-lg) {
     gap: 60px;
+    flex: 1 1 50%;
   }
 
   .advantage-card {
     flex: 1 1 100%;
     padding: 122px 0 0;
     position: relative;
-    @media screen and (min-width: $breakpoint-md) {
+    @media screen and (min-width: v.$breakpoint-md) {
       flex: 1 1 calc(50% - 30px);
     }
-    @media screen and (min-width: $breakpoint-lg) {
+    @media screen and (min-width: v.$breakpoint-lg) {
       flex: 1 1 calc(33% - 120px);
     }
   }
 }
 .advantage-card__title {
-  color: $regular-color;
+  color: v.$regular-color;
   font-weight: 700;
   font-size: 22px;
   margin-bottom: 15px;
 }
 .advantage-card__text {
-  color: $basic-white;
+  color: v.$basic-white;
   font-weight: 400;
   font-size: 16px;
 }
@@ -142,46 +146,32 @@
   background: url(..//img/icons/six.svg) no-repeat;
 }
 .stripe-block__container {
-  width: 100%;
-  // height: 20px;
-  background: $basic-white;
   position: relative;
-  @media screen and (min-width: $breakpoint-md) {
+
+  ::before {
+    content: "      ";
+    position: absolute;
+    // width: 100%;
+    top: 0;
+    right: 20px;
+    left: 20px;
+    height: 10px;
+    background: #cacadb;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
   }
-}
-.stripe-block__container ::before {
-  content: "      ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 10px;
-  background: url(../img/icons/Bgg.svg) no-repeat;
-  background-position: center center;
-  @media screen and (min-width: $breakpoint-md) {
-    background: url(../img/icons/768long.svg) no-repeat;
-    background-position: center center;
+  ::after {
+    content: "      ";
+    position: absolute;
+
+    top: 10px;
+    right: 40px;
+    left: 40px;
+    height: 10px;
+    background: #e7e7f2;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
   }
-  @media screen and (min-width: $breakpoint-lg) {
-    background: url(../img/icons/1024long.svg) no-repeat;
-    background-position: center center;
-  }
-}
-.stripe-block__container ::after {
-  content: "      ";
-  position: absolute;
-  top: 10px;
-  right: 0;
-  left: 0;
-  height: 10px;
-  background: url(../img/icons/Bg.svg) no-repeat;
-  background-position: center center;
-  @media screen and (min-width: $breakpoint-md) {
-    background: url(../img/icons/768short.svg) no-repeat;
-    background-position: center center;
-  }
-  @media screen and (min-width: $breakpoint-lg) {
-    background: url(../img/icons/1024short.svg) no-repeat;
-    background-position: center center;
+  @media screen and (min-width: v.$breakpoint-md) {
   }
 }
