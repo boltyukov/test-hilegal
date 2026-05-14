@@ -19,11 +19,14 @@
   text-align: center;
 }
 .main__three-imgs {
+  height: 720px;
+  overflow: auto;
   cursor: pointer;
   @media screen and (min-width: v.$breakpoint-md) {
     display: flex;
     flex-wrap: wrap;
     object-fit: cover;
+    height: auto;
   }
 }
 .cards-imgs {
@@ -43,12 +46,6 @@
   max-width: 100%;
 }
 
-.hide-mobile {
-  display: none;
-  @media screen and (min-width: v.$breakpoint-md) {
-    display: flex;
-  }
-}
 .img-one {
   background: #1c4280;
 }

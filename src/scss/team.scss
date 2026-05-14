@@ -1,0 +1,81 @@
+@use "vars" as v;
+@use "mixins" as m;
+.team {
+  padding: 30px 0 30px;
+}
+
+.swiper {
+}
+.team__swiper {
+}
+.swiper-wrapper {
+}
+.team__wrapper {
+}
+
+.team__slider {
+  border-radius: v.$radius-md;
+  overflow: hidden;
+  @media screen and (min-width: v.$breakpoint-lg) {
+    display: flex;
+  }
+}
+.team__image {
+  height: 500px;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+  @media screen and (min-width: v.$breakpoint-lg) {
+    height: auto;
+    flex: 0 0 400px;
+    line-height: 1.2;
+  }
+}
+.team__inner {
+  background: v.$bg-color;
+  padding: 30px;
+}
+.team__inner-bread {
+  display: inline-block;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: v.$regular-color;
+}
+.team__inner-title {
+  @include m.gradient-text;
+
+  @include m.title(transparent);
+  margin-bottom: 30px;
+}
+.team__inner-name {
+  font-weight: 700;
+  color: v.$text-color;
+  p + p {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 6px;
+  }
+}
+.swiper-pagination {
+  &.team__pagination {
+    position: static;
+    margin-top: 30px;
+    .swiper-pagination-bullet {
+      width: 16px;
+      height: 16px;
+      background: v.$regular-color;
+    }
+  }
+}

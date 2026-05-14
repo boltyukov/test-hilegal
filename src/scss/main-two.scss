@@ -58,7 +58,6 @@
   }
   @media screen and (min-width: v.$breakpoint-lg) {
     gap: 60px;
-    flex: 1 1 50%;
   }
 
   .advantage-card {
@@ -66,10 +65,10 @@
     padding: 122px 0 0;
     position: relative;
     @media screen and (min-width: v.$breakpoint-md) {
-      flex: 1 1 calc(50% - 30px);
+      flex: 1 1 45%;
     }
     @media screen and (min-width: v.$breakpoint-lg) {
-      flex: 1 1 calc(33% - 120px);
+      flex: 1 1 28%;
     }
   }
 }

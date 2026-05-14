@@ -1,3 +1,10 @@
+// js
+import Swiper from "swiper";
+import { Pagination } from "swiper/modules";
+//css
+import "swiper/css";
+
+import "swiper/css/pagination";
 import "../scss/style.scss";
 
 (function () {
@@ -68,3 +75,18 @@ window.changeLanguage = function (lang) {
     activeLink.classList.add("active");
   }
 };
+
+// swiper
+const swiper = new Swiper(".swiper", {
+  modules: [Pagination],
+  // options
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 30,
+
+  pagination: {
+    el: ".swiper-pagination",
+
+    clickable: true,
+  },
+});
