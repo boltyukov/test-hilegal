@@ -144,33 +144,3 @@
 
   background: url(..//img/icons/six.svg) no-repeat;
 }
-.stripe-block__container {
-  position: relative;
-
-  ::before {
-    content: "      ";
-    position: absolute;
-    // width: 100%;
-    top: 0;
-    right: 20px;
-    left: 20px;
-    height: 10px;
-    background: #cacadb;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-  }
-  ::after {
-    content: "      ";
-    position: absolute;
-
-    top: 10px;
-    right: 40px;
-    left: 40px;
-    height: 10px;
-    background: #e7e7f2;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-  }
-  @media screen and (min-width: v.$breakpoint-md) {
-  }
-}
